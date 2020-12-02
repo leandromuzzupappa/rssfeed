@@ -8,6 +8,8 @@ import LoginLayout from './layouts/LoginLayout';
 // Pages
 import Homepage from './pages/Home';
 import Login from './pages/Login';
+import Register from './pages/Register';
+import ResetPassword from './pages/ResetPassword';
 
 const App = () => {
     return (
@@ -28,6 +30,24 @@ const App = () => {
                     render={() => (
                         <LoginLayout>
                             <Login />
+                        </LoginLayout>
+                    )}
+                />
+                <Route
+                    exact
+                    path="/register"
+                    render={() => (
+                        <LoginLayout>
+                            <Register />
+                        </LoginLayout>
+                    )}
+                />
+                <Route
+                    exact
+                    path="/reset-password"
+                    render={() => (
+                        <LoginLayout>
+                            <ResetPassword />
                         </LoginLayout>
                     )}
                 />
