@@ -1,0 +1,17 @@
+@import '../../../assets/scss/variables.scss';
+
+.input {
+    width: 100%;
+    padding: 1rem 2rem;
+    border: 1px solid $gray3;
+    border-radius: .5rem;
+    background: $white;
+    @include font-size(12);
+    margin-bottom: 1rem;
+    @include transition(.2s);
+
+    &:focus {
+        border: 1px solid $gray4;
+
+    }
+}
