@@ -9,9 +9,9 @@ const FeedList = (props) => {
             <h4>Feeds</h4>
 
             <ListCategories>
-                <ListItem link="#" title="dsadsa" />
-                <ListItem link="#" title="dsadsa" />
-                <ListItem link="#" title="dsadsa" />
+                <ListItem link="#" title="Rss1" />
+                <ListItem link="#" title="Rss2" />
+                <ListItem link="#" title="Rss3" />
             </ListCategories>
         </section>
     );

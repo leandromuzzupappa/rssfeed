@@ -13,19 +13,13 @@ const Header = (props) => {
             <nav id="menu">
                 <ul>
                     <li>
-                        <Link to="/">Link1</Link>
+                        <Link to="/login">Iniciar sesion</Link>
                     </li>
                     <li>
-                        <Link to="/">Link2</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Link3</Link>
+                        <Link to="/register">Registrarse</Link>
                     </li>
                 </ul>
             </nav>
-            <div className="userActions">
-                <Link to="/">Account</Link>
-            </div>
         </header>
     );
 };

@@ -26,7 +26,7 @@ const FeedContent = (props) => {
             })}
         </section>
     ) : (
-        <h1>dsadsaa</h1>
+        <h1>Cargando</h1>
     );
 };
 
