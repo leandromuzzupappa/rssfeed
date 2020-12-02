@@ -1,0 +1,59 @@
+// Colors
+$white: #FFFFFF;
+$black: #000000;
+
+$gray1: #EAF0F7;
+$gray2: #C8D6E5;
+$gray3: #8395A7;
+$gray4: #576574;
+$gray5: #222F3E;
+
+$error:     #e74c3c;
+$error_h:   #c0392b;
+$success:   #2ecc71;
+$success_h: #27ae60;
+$warning:   #f1c40f;
+$warning_h: #f39c12;
+
+$color1:    #0652DD;
+
+// Fonts
+$montserrat: 'Montserrat', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+$merriweather: 'Merriweather', serif;
+
+// Mixins
+@mixin prefix($property, $value) {
+    //$vendors: 'webkit moz ms o';
+    $vendors: webkit moz ms o;
+    $default: true;
+
+    // -moz-$property: $value;
+    // -webkit-$property: $value;
+    // -o-$property: $value;
+    // -ms-$property: $value;
+    // property: $value
+    @if $vendors {
+        @each $vendor in $vendors {
+            #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+    }
+
+    @if $default {
+        #{$property}: #{$value};
+    }
+}
+
+@mixin font-size($size) {
+    $base: 16;
+    font-size: $size + px;
+    font-size: ($size / $base) * 1rem;
+}
+
+@mixin transition($time) {
+    @include prefix(transition, all $time);
+}
+
+@mixin shadow($x, $y, $spread, $color, $opacity) {
+    @include prefix(box-shadow, $x $y $spread 0px rgba($color, $opacity));
+}
